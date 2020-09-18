@@ -9,7 +9,7 @@ import {
   UPDATE_YEAR,
   GET_MOVIE_WITH_IMDB,
 } from "../types";
-const API_BASE = "http://www.omdbapi.com/?";
+const API_BASE = "https://www.omdbapi.com/?";
 const API_KEY = "apikey=7c46194e";
 
 // API
@@ -39,8 +39,8 @@ export const getMoviesbySearch = (searchKey, page, searchType, year) => {
 
 export const getMoviesByYear = (year) => {
   // This api request does not work !!!
+  
   const API_BY_YEAR = `${API_BASE}${API_KEY}&?y=${year}`;
-  console.log(API_BY_YEAR);
   return async (dispatch) => {
     dispatch({ type: GET_MOVIES_START });
     try {

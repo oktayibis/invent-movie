@@ -22,7 +22,6 @@ function Index() {
     dispatch(getMoviesbySearch(searchText, pageNumber, searchType));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageNumber]);
-  console.log(movies);
   return (
     <Container>
       <Navigation />
