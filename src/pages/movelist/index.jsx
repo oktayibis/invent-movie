@@ -1,4 +1,4 @@
-import { Container, Grid, ProgressBar } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import MovieItem from "../../components/movie-item";
@@ -8,25 +8,24 @@ import {
 } from "../../redux/movies/actions/actions";
 import Pagination from "@material-ui/lab/Pagination";
 
+import Navigation from "../../components/navigation/";
+
 // Style
 
-import "./list.styles.scss";
-
 function Index() {
-  const { movies, loading, searchText, pageNumber, searchType } = useSelector(
+  const { movies, searchText, pageNumber, searchType } = useSelector(
     (state) => state.movies
   );
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetch = async () => {
-      dispatch(await getMoviesbySearch(searchText, pageNumber, searchType));
-    };
-    fetch();
+    dispatch(getMoviesbySearch(searchText, pageNumber, searchType));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageNumber]);
   console.log(movies);
   return (
     <Container>
+      <Navigation />
       <Container style={{ marginBottom: 20 }}>
         <Pagination
           variant="outlined"
@@ -36,7 +35,7 @@ function Index() {
           onChange={(e, v) => dispatch(updatePageNumber(v))}
         />
       </Container>
-      <Grid container spacing={2}>
+      <Grid container xl>
         {movies
           ? movies.Search.map((movie) => <MovieItem movie={movie} />)
           : "Loading"}
@@ -46,12 +45,3 @@ function Index() {
 }
 
 export default Index;
-
-// <div>
-// <div>Movie list</div>
-// <Container className="listContainer">
-//   {movies
-//     ? movies.Search.map((item) => <MovieItem movie={item} />)
-//     : "loading"}
-// </Container>
-// </div>

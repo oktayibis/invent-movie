@@ -1,7 +1,5 @@
 .App {
-  text-align: center;
   max-width: 1400px;
   align-items: center;
-  margin: 5%;
-  border: 1px solid saddlebrown;
+  margin: 5% auto;
 }

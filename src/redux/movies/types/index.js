@@ -9,3 +9,5 @@ export const UPDATE_PAGE_NUMBER = "@UPDATE_PAGE_NUMBER";
 export const UPDATE_TYPE = "@UPDATE_TYPE";
 
 export const UPDATE_YEAR = "@UPDATE_YEARS";
+
+export const GET_MOVIE_WITH_IMDB = "@GET_MOVIE_WITH_IMDB";
