@@ -1,0 +1,19 @@
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .searchArea {
+    display: flex;
+    flex-direction: column;
+    .types {
+      margin-left: 40px;
+    }
+    .inputContainer {
+      width: 100%;
+      margin: auto 10px;
+    }
+  }
+  .yearContainer {
+    margin: auto 20px;
+  }
+}
