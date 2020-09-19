@@ -26,7 +26,7 @@ function Index() {
       dispatch(await getMoviesbySearch(searchText, pageNumber, searchType));
     };
     fetch();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageNumber]);
   return (
     <Container>

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getMovieWithImdbAction } from "../../redux/movies/actions/actions";
 import { Container, Grid, Link, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Skeleton from "@material-ui/lab/Skeleton";
 
 import Alert from "@material-ui/lab/Alert";
 
@@ -110,7 +111,8 @@ function Index() {
         </Container>
       </Container>
     );
-  } else return "Loading";
+  }
+  return <Skeleton animation="wave" variant="rect" width={1400} height={720} />;
 }
 
 export default Index;

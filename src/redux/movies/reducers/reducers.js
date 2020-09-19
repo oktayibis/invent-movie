@@ -5,7 +5,8 @@ import {
   UPDATE_SEARCH_KEY,
   UPDATE_PAGE_NUMBER,
   UPDATE_TYPE,
-  UPDATE_YEAR, GET_MOVIE_WITH_IMDB
+  UPDATE_YEAR,
+  GET_MOVIE_WITH_IMDB,
 } from "../types";
 
 const initialState = {
@@ -59,11 +60,11 @@ export default (state = initialState, action) => {
         year: action.year,
       };
 
-      case GET_MOVIE_WITH_IMDB:
-        return {
-          ...state,
-          clickedMovie: action.movie
-        }
+    case GET_MOVIE_WITH_IMDB:
+      return {
+        ...state,
+        clickedMovie: action.movie,
+      };
     default:
       return {
         ...state,

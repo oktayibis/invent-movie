@@ -39,7 +39,7 @@ export const getMoviesbySearch = (searchKey, page, searchType, year) => {
 
 export const getMoviesByYear = (year) => {
   // This api request does not work !!!
-  
+
   const API_BY_YEAR = `${API_BASE}${API_KEY}&?y=${year}`;
   return async (dispatch) => {
     dispatch({ type: GET_MOVIES_START });

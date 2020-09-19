@@ -20,7 +20,7 @@ function Index() {
 
   useEffect(() => {
     dispatch(getMoviesbySearch(searchText, pageNumber, searchType));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageNumber]);
   return (
     <Container>
